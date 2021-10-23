@@ -7,6 +7,9 @@ int problema1();
 int problema2();
 int problema3();
 int problema4();
+int problema5();
+int problema7();
+int problema8();
 
 int main() {
 	//Acentuação
@@ -15,8 +18,9 @@ int main() {
 	problema2();
 	problema3();
 	problema4();
-	
-	
+	problema5();
+	problema7();	
+	problema8();
 	return 0;
 }
 
@@ -72,9 +76,55 @@ int problema4(){
 	cin >> celsius;
 	fahr = (celsius * 9/5) + 32 ;
 	
-	cout << "\nA temperatura é " <<fahr << " Fahrenheit!";
+	cout << "\nA temperatura é " <<fahr << " Fahrenheit!\n\n";
 }
 
+int problema5(){
+	int a, b;
+	cout << "Digite dois numeros: " ;
+	cin >> a;
+	cin >> b;
+	
+	if (a % b == 0){
+		cout << "Os numeros são multiplos\n\n";
+	}
+	else
+		cout << "Os numeros não são multiplos\n\n";
+}
+
+/*int problema6(){
+	//6 - Uma partida de futebol iniciou na hora A e terminou na hora B. Faça um algoritmo que calcule o tempo que durou a partida.
+	
+
+}
+*/
+
+int problema7(){
+	//7 - Dada uma lista de números A[1,2,3,…], faça um algoritmo que retorne uma lista somente com os números pares.
+
+	for (int l = 1; l<=10;l++){
+		int p = l;
+		
+		if (p % 2 == 0)
+		cout << p << " ";
+	}
+}
+
+int problema8(){
+	//8 - Faça um algoritmo que receba um número e retorne se o número é primo ou não.
+	
+	int l, num, div=0;
+	cout << "\n\nDigite um numero: ";
+	cin >> num;
+    for(l=2 ; l<=num/2 ; l++)
+        if(num%l==0)
+            div++;
+
+    if(div==0)
+        cout << "É primo" <<endl;
+    else
+        cout << "Não é primo" <<endl;
+}
 
 
 
