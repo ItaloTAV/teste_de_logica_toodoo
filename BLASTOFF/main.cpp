@@ -4,11 +4,13 @@
 using namespace std;
 
 int problema1();
+int problema2();
 
 int main() {
 	//Acentuação
 	setlocale(LC_ALL,"");
 	problema1();
+	problema2();
 	
 	
 	return 0;
@@ -26,5 +28,16 @@ int problema1(){
 	
 int problema2(){
 	//2- Dada a distância A e o combustível gasto B, faça um algoritmo para calcular o consumo médio.
+	float a;
+	float comb;
+	cout << "Digite a distância percorrida: ";
+	cin >> a ;
 	
+	cout << "\nDigite o combustível gasto: ";
+	cin >> comb;
+	
+	float b = a/comb;
+	cout << "O consumo médio é de " << b << " km/l.";	
 }
+
+
