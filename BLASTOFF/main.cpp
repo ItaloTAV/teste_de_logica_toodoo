@@ -10,6 +10,11 @@ int problema4();
 int problema5();
 int problema7();
 int problema8();
+int problema9();
+int problema10();
+int problema11();
+int problema13();
+int problema14();
 
 int main() {
 	//Acentuação
@@ -21,6 +26,11 @@ int main() {
 	problema5();
 	problema7();	
 	problema8();
+	problema9();
+	problema10();
+	problema11();
+	problema13();
+	problema14();
 	return 0;
 }
 
@@ -126,5 +136,99 @@ int problema8(){
         cout << "Não é primo" <<endl;
 }
 
+int problema9(){
+	//9 - Faça um algoritmo que receba um número e retorne a tabuada desse número.
+		
+	int multi;
+	cout << "\n\n Digite um numero para a tabuada: ";
+	cin >> multi;
+	cout << endl << endl;
+	
+	for (int l = 1; l <= 10; l++){
+		int result = multi*l;
+		cout << endl;
+		cout << multi << "x" << l << " = " << result;
+	}
+}
 
+int problema10(){
+	 //10 - Faça um algoritmo que receba um número e retorne o Fatorial desse 
+    int n, aux, prod=1;
+
+    cout << "\n\nFatorial de: ";
+    cin >> n;
+
+    for(aux=1 ; aux<=n ; aux++)
+        prod *= aux;
+
+    cout << "Fatorial: " << prod << endl;
+}
+
+int problema11(){
+	 //Dada duas lista de números A[1,2,3,4] e B[1,2,5,8], faça um algoritmo que retorne a intersecção das listas
+	 
+	 int a[] = { 1, 2, 3, 4}, b[] = { 1, 2, 5, 8};
+  int i,j;
+
+  cout << "\nConjunto A { 1, 2, 3, 4 } ";
+  cout <<"\nconjunto B { 1, 2, 5, 8 } ";
+
+  for (i = 0; i < 4; i++){
+  	  for (j = 0; j < 4; j++){
+			  if(a[i] == b[j]){
+				 cout <<"\nA interseccao contém: " << a[i];
+			  }
+       }
+  }
+	
+}
+
+int problema13(){
+	// 13 - Faça um algoritmo que receba uma matriz[i,z] como parâmetro e imprima todos os valores dessa matriz
+
+cout << endl;
+cout << endl;
+	int matriz [3][3];
+	
+	matriz[0][0] = 5;
+	matriz[0][1] = 22;
+	matriz[0][2] = 11;
+			
+	matriz[1][0] = 12;
+	matriz[1][1] = 5;
+	matriz[1][2] = 6;
+	
+	matriz[2][0] = 33;
+	matriz[2][1] = 7;
+	matriz[2][2] = 8;
+	
+	for(int a=0; a < 3; a++){
+		for (int b=0; b < 3; b++){
+			cout << matriz[a][b] << " ";
+		}
+		cout << endl;
+	}
+}
+
+int problema14(){
+	//14 - Faça um algoritmo que recebe uma palavra e retorne se a palavra é palíndromo. (Palavra que se pode ler, indiferentemente, da esquerda para direita ou vice-versa. Ex: osso, Ana e etc)
+	
+	string s1;
+    
+    cin >> s1;
+
+    if (s1 == string(s1.rbegin(), s1.rend())) {
+        cout << "A palavra é palindromo" << endl;
+    } else {
+        cout << "A palavra não é palindromo" << endl;
+    }
+}
+	
+	
+	
+	
+	
+	
+	
+	
 
